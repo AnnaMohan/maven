@@ -1,5 +1,11 @@
 pipeline {
     agent any
+    tools
+    {
+        jdk 'jdk'
+        maven 'Maven'
+    }
+    
     stages {
         stage('start') {
             steps {

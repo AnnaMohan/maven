@@ -9,7 +9,8 @@ pipeline {
         }
         stage('fetch') {
             steps {
-                    checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], gitTool: 'Default', submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'Gitcred', url: 'https://github.com/AnnaMohan/maven.git' ]]])
+                //    checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], gitTool: 'Default', submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'Gitcred', url: 'https://github.com/AnnaMohan/maven.git' ]]])
+                checkout scm
             }
         }
         stage('complie') {

@@ -28,7 +28,7 @@ pipeline {
         }
          stage ('Sonar Analysis') {
             steps {
-                withSonarQubeEnv('sonar'){
+                withSonarQubeEnv('sonarqube'){
                     bat 'sonar-scanner.bat -Dsonar.projectKey=MyGit -Dsonar.projectName=MyGIt -Dsonar.projectVersion=1.0'
                 }
             }
